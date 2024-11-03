@@ -2,22 +2,22 @@
 
 Sebelum mulai mengerjakan alangkah baiknya kita setup python env terlebih dahulu dengan cara
 
-'''bash
+```bash
 python -m env env
-'''
+```
 
 Setelah memebuat python env kita jalankan environment dengan cara
 
-'''bash
+```bash
 . env/Scripts/activate
-'''
+```
 
 jika terminal kalian menggunakan powershell maka nanti akan muncul (env) di samping kiri terminal
 
 #Menginstall requirement libs
-'''bash
+```bash
 pip install -r requirement.txt
-'''
+```
 
 #Menjalankan projek
 
