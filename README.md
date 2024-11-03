@@ -21,4 +21,6 @@ pip install -r requirement.txt
 
 #Menjalankan projek
 
-Cukup jalankan main.py pada root file untuk menjalankan projek
+Cukup jalankan main.py pada root file untuk menjalankan projek 
+
+Sekian
