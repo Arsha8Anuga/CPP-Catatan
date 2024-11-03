@@ -1,11 +1,12 @@
 from sqlalchemy import ForeignKey, String, Enum, DateTime
+from enum import Enum as PyEnum
 from typing import List, Optional
 from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column, relationship
 
 class Base(DeclarativeBase):
     pass
 
-class Status(Enum):
+class Status(PyEnum):
     pending = "PENDING"
     in_progress = "IN PROGRESS"
     finished = "FINISHED"
@@ -40,7 +41,7 @@ class Todo(Base):
     id: Mapped[int] = mapped_column(primary_key=True)
     name: Mapped[str] = mapped_column(String(30))
     class_name: Mapped[str] = mapped_column(String(30))
-    status: Mapped[Enum] = mapped_column(Enum(Status), nullable=False)
+    status: Mapped[Status] = mapped_column(Enum(Status), nullable=False)
     deadline: Mapped[DateTime] = mapped_column(DateTime)
     subject_id: Mapped[int] = mapped_column(ForeignKey('subject.id'))
     note: Mapped[str] = mapped_column(String(30), nullable=True)
